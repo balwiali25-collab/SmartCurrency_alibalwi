@@ -73,7 +73,7 @@ function setLang(lang) {
 
 // حساب تفكيك العملات
 function calculateDenominations(amount){
-  const bills = [500,200,100,50,20,10];
+  const bills = [500,200,100,50,25,10];
   let remaining = amount;
   let result = {};
   for(let bill of bills){
@@ -129,13 +129,3 @@ setLang('ar');
 
 </body>
 </html>
- حساب تفكيك العملات
-function calculateDenominations(amount){
-  const bills = [500, 200, 100, 50, 25, 10];  // تعديل 20 إلى 25
-  let remaining = amount;
-  let result = {};
-  for (let bill of bills) {
-    result[bill] = Math.floor(remaining / bill);
-    remaining %= bill;
-  }
-  return result;
